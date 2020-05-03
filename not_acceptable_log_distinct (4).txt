@@ -1,0 +1,26 @@
+Version in filename (8 occurences)
+Example: D:\Workspace\PrixReports\reports\source\Delta17032020\DPRF_2020_01_29_KVITEBJORN_r0.xml: acceptable: False. reason: is DPRF and no relevant MPRF found
+Version in filename (r0) and version in report (1) mismatch.
+
+   at Ras.Import.ReportFile.ValidateVersionOrThrow(Int32 versionFromFileContent) in D:\Git\Statoil\ras\src\Ras.Import\Model\ReportFile.cs:line 173
+   at Ras.Import.Program.Main(String[] args) in D:\Git\Statoil\ras\src\Ras.Import\Program.cs:line 102
+
+
+Non published file (2 occurences)
+Example: D:\Workspace\PrixReports\reports\source\DPRF_Gassco\DPRF_2019_04_19_KVITEBJORN_r0.xml: acceptable: False. reason: No similar report exists, is DPRF and no relevant MPRF found
+Non published file
+
+
+
+
+Report already exists in DB! (189 occurences)
+Example: D:\Workspace\PrixReports\reports\source\MPRF_Gassco_2015\MPRF_2015_01_KVITEBJORN_r0.xml: acceptable: False. reason: all MPR* must be imported
+Report already exists in DB! Existing reports:
+13715a52-ca97-4aa1-889a-08d7d4b35755: from this session: (D:\Workspace\PrixReports\reports\source\MPRF_Gassco\MPRF_2015_01_KVITEBJORN_r0.xml) | Same size: False. Same content shallow: False. One has UTF8 tag, one does not: True. Same XML after load: True 
+
+
+   at Ras.Import.ReportImport.ThrowIfReportExists(ReportDbContext context, String file, ReportConfiguration configuration, Int32 version, DateTime periodFrom) in D:\Git\Statoil\ras\src\Ras.Import\ReportImport.cs:line 142
+   at Ras.Import.ReportImport.ImportReport(ReportDbContext context, ReportFile fileInfo, DeserializedReport reportImportItem, ReportConfiguration configuration) in D:\Git\Statoil\ras\src\Ras.Import\ReportImport.cs:line 38
+   at Ras.Import.Program.Main(String[] args) in D:\Git\Statoil\ras\src\Ras.Import\Program.cs:line 110
+
+
